@@ -103,15 +103,18 @@ def build_contents(history: list[dict]) -> list[dict]:
 
 
 _client = None
+_client_key: str | None = None
 _working_model: str | None = None
 
 
 def _client_and_models():
-    global _client
+    global _client, _client_key
     from google import genai  # imported here so the app still starts without the package
 
-    if _client is None:
-        _client = genai.Client(api_key=get_api_key())
+    key = get_api_key()
+    if _client is None or key != _client_key:  # rebuild if the key in secrets was changed
+        _client = genai.Client(api_key=key)
+        _client_key = key
     chosen = _get_setting("GEMINI_MODEL")
     models = [chosen] if chosen else []
     if _working_model:
