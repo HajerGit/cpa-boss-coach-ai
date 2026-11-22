@@ -231,6 +231,15 @@ def screen_setup() -> None:
         st.session_state.session_start = time.time()
         st.rerun()
 
+    # Small disclaimer, first screen only
+    st.markdown(
+        "<p style='font-size:0.72rem;opacity:0.6;margin-top:2.5rem;line-height:1.4'>"
+        "Independent practice tool by Hajer Alshame. Not affiliated with the AICPA or NASBA. "
+        "AI answers can contain mistakes, so check important points against the official standards. "
+        "Please don't type personal information into the chat.</p>",
+        unsafe_allow_html=True,
+    )
+
 
 # ---------------------------------------------------------------------------
 # Screen: QUESTION
@@ -629,3 +638,4 @@ SCREENS = {
 }
 
 SCREENS[st.session_state.screen]()
+
