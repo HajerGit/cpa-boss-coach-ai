@@ -1,0 +1,482 @@
+[
+  {
+    "id": "rev_1",
+    "topic": "revenue_recognition",
+    "scenario": "Your manager at Grant & Wells LLP sends you this note:\n\n'Please record the revenue entry for Acme Corp. We signed a 12-month software-as-a-service contract on July 1, 2024 for $24,000 paid upfront. Record the entry as of December 31, 2024.'\n\nA junior staff member has drafted the following journal entry:\n\nDr. Cash                     $24,000\n  Cr. Service Revenue          $24,000\n\nDate: July 1, 2024",
+    "question": "What is WRONG with this journal entry under ASC 606?",
+    "options": {
+      "A": "The debit should be to Accounts Receivable, not Cash.",
+      "B": "Only $12,000 should be recognized as revenue; $12,000 should be Deferred Revenue.",
+      "C": "The full $24,000 revenue is correct but the date should be December 31, 2024.",
+      "D": "Revenue should be recorded at $2,000 per month, so the entry needs 12 separate entries."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "Under ASC 606, revenue is recognized as performance obligations are satisfied over time. By December 31, 2024, only 6 of 12 months have elapsed, so only $12,000 (6/12 × $24,000) is earned. The remaining $12,000 is a liability: Deferred Revenue.",
+      "why_not_A": "Cash is correct — the problem states the $24,000 was paid upfront, so debiting Cash is appropriate.",
+      "why_not_C": "Changing only the date does not fix the core error. Recognizing the full $24,000 on any single date ignores that only half the service has been delivered by year-end.",
+      "why_not_D": "While revenue IS earned at $2,000/month, ASC 606 does not require 12 separate entries. A single adjusting entry at period-end recognizing the earned portion is acceptable.",
+      "tip": "Ask: 'How much of the performance obligation is complete?' — only recognize revenue proportional to what has been delivered."
+    }
+  },
+  {
+    "id": "rev_2",
+    "topic": "revenue_recognition",
+    "scenario": "Your manager asks you to review a revenue entry for Bright Solutions Inc. Bright sold a bundled package on January 1, 2024 for $90,000: standalone prices are $60,000 for a software license (transferred immediately) and $40,000 for 2-year support (provided evenly). The staff entry reads:\n\nDr. Cash                     $90,000\n  Cr. Software License Revenue  $90,000\n\nDate: January 1, 2024",
+    "question": "What is the PRIMARY error in this entry per ASC 606?",
+    "options": {
+      "A": "Cash should be split: $54,000 debit for software and $36,000 debit for support.",
+      "B": "The contract price should be allocated to each performance obligation based on relative standalone selling prices, and support revenue must be deferred.",
+      "C": "The full $90,000 is fine since the customer paid in full on day one.",
+      "D": "Only the support portion ($40,000) should be recognized; the license is never recognized upfront."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "ASC 606 Step 4 requires allocating the transaction price based on relative SSPs. License SSP = $60K / $100K × $90K = $54,000 (recognized immediately); Support SSP = $40K / $100K × $90K = $36,000 (deferred over 24 months). Two performance obligations exist and must be recorded separately.",
+      "why_not_A": "The debit is always to Cash for the total amount received ($90,000). Splitting the debit is not how allocation works — allocation affects the credit side (revenue vs. deferred revenue).",
+      "why_not_C": "Payment received ≠ revenue earned. The support obligation spans 2 years; recognizing all $90,000 upfront overstates revenue.",
+      "why_not_D": "A software license transferred at a point in time IS recognized immediately. Only the ongoing support service is deferred.",
+      "tip": "SSP allocation rule: each performance obligation gets (its SSP / total SSP) × contract price — always split the credits, never the debit for cash received."
+    }
+  },
+  {
+    "id": "rev_3",
+    "topic": "revenue_recognition",
+    "scenario": "Meadowbrook Construction has a fixed-price contract to build a warehouse for $500,000. As of December 31, 2024, total costs incurred are $180,000 and estimated costs to complete are $120,000 (total estimated cost = $300,000). The company uses the cost-to-cost input method.\n\nThe staff accountant recorded revenue for 2024 as:\n\nRevenue recognized = $180,000 / $500,000 × $500,000 = $180,000",
+    "question": "What is WRONG with the revenue calculation under ASC 606?",
+    "options": {
+      "A": "Revenue should equal total costs incurred ($180,000) since the contract is cost-plus.",
+      "B": "Revenue recognized = costs incurred / total estimated costs × contract price = $180,000 / $300,000 × $500,000 = $300,000.",
+      "C": "No revenue can be recognized until the warehouse is 100% complete under ASC 606.",
+      "D": "The percentage of completion is 36% ($180,000 / $500,000), so the calculation is correct."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "Under ASC 606's cost-to-cost input method, the percentage of completion = costs incurred to date / total estimated costs = $180,000 / $300,000 = 60%. Revenue recognized = 60% × $500,000 = $300,000. The staff used $500,000 (the contract price) in the denominator instead of $300,000 (total estimated costs), giving an incorrect 36% completion figure.",
+      "why_not_A": "This is a fixed-price contract, not cost-plus. Revenue is based on the contract price ($500,000) multiplied by the percentage of completion, not simply costs incurred.",
+      "why_not_C": "ASC 606 permits over-time revenue recognition when the customer simultaneously receives and consumes benefits, the asset is controlled by the customer, or the asset has no alternative use. Construction contracts typically qualify for over-time recognition.",
+      "why_not_D": "$180,000 / $500,000 = 36% is incorrect. The denominator should be total ESTIMATED COSTS ($300,000), not the contract price ($500,000).",
+      "tip": "Cost-to-cost: % complete = Costs Incurred / TOTAL ESTIMATED COSTS (not the contract price). Multiply that percentage by the contract price to get revenue."
+    }
+  },
+  {
+    "id": "rev_4",
+    "topic": "revenue_recognition",
+    "scenario": "Pinnacle Auto Dealers sells a car for $30,000 on December 1, 2024. The customer pays $5,000 down and finances $25,000. Pinnacle also sells an optional 3-year extended warranty for $1,800 (SSP = $1,800). Both items are in the same contract.\n\nThe staff entry on December 1, 2024:\n\nDr. Cash / Receivable      $31,800\n  Cr. Sales Revenue            $31,800",
+    "question": "What is the error in this entry under ASC 606?",
+    "options": {
+      "A": "The warranty revenue of $1,800 should be recognized immediately because the customer paid for it.",
+      "B": "The $31,800 should be split: $30,000 to Vehicle Sales Revenue (recognized now) and $1,800 to Deferred Warranty Revenue (recognized over 3 years).",
+      "C": "The debit should be entirely to Cash; recording a receivable for a financed amount is incorrect.",
+      "D": "The entry is correct. Extended warranties are part of the vehicle sale and recognized at delivery."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "The warranty is a separate performance obligation because it is sold separately and has a standalone selling price. Under ASC 606, the $1,800 warranty revenue must be deferred and recognized over the 3-year coverage period. Vehicle revenue ($30,000) is recognized at delivery because control transfers at that point.",
+      "why_not_A": "Payment received does not determine when revenue is recognized; delivery of the performance obligation does. The warranty service spans three years, so its revenue is spread over that period.",
+      "why_not_C": "Debiting both Cash (for the $5,000 down payment) and Accounts Receivable (for the $25,000 financed amount) is correct. The debit side is not the error here.",
+      "why_not_D": "Extended warranties covering periods beyond the standard manufacturer's warranty are distinct performance obligations under ASC 606, not part of the vehicle sale itself.",
+      "tip": "Whenever a contract bundles an extended warranty with a product sale, ask: is the warranty sold separately? If yes, it is a separate PO — defer and amortize."
+    }
+  },
+  {
+    "id": "rev_5",
+    "topic": "revenue_recognition",
+    "scenario": "GreenLeaf Landscaping signs a contract on March 1, 2024 to maintain a corporate campus for 10 months for a fixed fee of $50,000, plus a $10,000 bonus if the customer gives a satisfaction rating of 4+/5 by December 31, 2024. The probability of earning the bonus is 60%.\n\nThe staff accountant included the full $60,000 as the transaction price.",
+    "question": "What is WRONG with how the transaction price was determined under ASC 606?",
+    "options": {
+      "A": "The transaction price is $50,000; variable consideration (the bonus) is never included until it is received in cash.",
+      "B": "The transaction price is $60,000; since there is a 60% probability the bonus is earned, the full $10,000 is included.",
+      "C": "The bonus is variable consideration. It should be included only to the extent it is probable that a significant reversal of cumulative revenue will NOT occur — the expected value or most-likely-amount must be used and constrained.",
+      "D": "Variable consideration bonuses are always excluded from the transaction price under ASC 606."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_reason": "ASC 606-10-32-11 requires variable consideration to be estimated (expected value or most-likely-amount) and then constrained: include only the amount for which it is probable that a significant revenue reversal will not occur. At 60% probability, there is meaningful uncertainty; the company must assess whether including any or all of the $10,000 passes the constraint test. Simply including 100% of the bonus without that analysis is the error.",
+      "why_not_A": "ASC 606 specifically allows variable consideration to be estimated and included in the transaction price BEFORE it is received in cash, provided the constraint is met. Waiting for cash receipt is old GAAP thinking.",
+      "why_not_B": "Including 100% of the bonus at 60% probability ignores the constraint requirement. The expected value would be $6,000 (60% × $10,000), but even that must pass the constraint test before inclusion.",
+      "why_not_D": "Variable consideration is not automatically excluded. ASC 606 requires estimation using expected value or most-likely-amount, subject to the constraint. Bonuses, discounts, and rebates are common examples that are routinely included.",
+      "tip": "Variable consideration checklist: (1) Estimate it (expected value or most-likely-amount). (2) Apply the constraint — include only what will not cause a significant reversal. Never include 100% mechanically based on probability alone."
+    }
+  },
+  {
+    "id": "rev_6",
+    "topic": "revenue_recognition",
+    "scenario": "Sunrise Pharma licenses a patent to BioGen on January 1, 2024 for $2,000,000. The license grants BioGen the right to use Sunrise's existing IP 'as it exists' at the license date with no ongoing obligations from Sunrise.\n\nThe staff entry:\n\nDr. Cash / Receivable      $2,000,000\n  Cr. License Revenue          $166,667  (1/12 of annual amount)\n  Cr. Deferred License Revenue $1,833,333\n\nDate: January 1, 2024",
+    "question": "What is WRONG with this entry under ASC 606?",
+    "options": {
+      "A": "License revenue for IP should always be deferred and amortized over the contract term.",
+      "B": "The entry is correct — IP licenses are always recognized ratably over time.",
+      "C": "Because the license grants the right to use existing IP at a point in time (no ongoing obligations), the entire $2,000,000 should be recognized as revenue on January 1, 2024.",
+      "D": "The $2,000,000 should be split between the IP value and a contingent royalty component."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_reason": "ASC 606-10-55-58 distinguishes two types of IP licenses: (1) right-to-use — recognized at the point in time the license is transferred, and (2) right-to-access — recognized over time. Because Sunrise's license grants BioGen the right to use IP 'as it exists' with no ongoing obligations, it is a right-to-use license. Control transfers on January 1, 2024, and all $2,000,000 is recognized immediately.",
+      "why_not_A": "Deferring and amortizing applies to right-to-access licenses, where the licensor has ongoing obligations that affect the IP's utility over time. That is not the case here.",
+      "why_not_B": "This option states the entry is correct, but the entry incorrectly defers $1,833,333. The correct answer is full recognition, not ratable recognition.",
+      "why_not_D": "There is no royalty component described. Splitting revenue requires an identifiable second performance obligation, which is not present in this scenario.",
+      "tip": "IP license shortcut: 'Right to USE' (static IP, no ongoing support) = point-in-time recognition. 'Right to ACCESS' (evolving IP, ongoing obligations) = over-time recognition."
+    }
+  },
+  {
+    "id": "lease_1",
+    "topic": "leases",
+    "scenario": "You are preparing the balance sheet for Redwood Manufacturing. On January 1, 2024, Redwood signed a 5-year operating lease for equipment. Annual payments are $20,000, payable at the end of each year. The incremental borrowing rate is 6%. PV factor (annuity, 5 yrs, 6%) = 4.2124.\n\nThe staff accountant recorded:\n\nDr. Right-of-Use Asset     $100,000\n  Cr. Lease Liability          $100,000\n\nDate: January 1, 2024",
+    "question": "What is wrong with the initial recognition entry under ASC 842?",
+    "options": {
+      "A": "Operating leases do not require a right-of-use asset — only finance leases do.",
+      "B": "The lease liability should be $84,248 (PV of payments), not $100,000 (undiscounted sum).",
+      "C": "The right-of-use asset should be debited to Prepaid Lease Expense instead.",
+      "D": "The entry is correct; $100,000 is the proper amount for both the asset and liability."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "ASC 842 requires the lease liability to be measured at the PRESENT VALUE of future lease payments, not the undiscounted total. PV = $20,000 × 4.2124 = $84,248. Both the lease liability and the ROU asset should be $84,248 at inception.",
+      "why_not_A": "ASC 842 eliminated the old 'off-balance-sheet' treatment. BOTH operating and finance leases require a right-of-use asset and a lease liability on the balance sheet.",
+      "why_not_C": "ASC 842 specifically replaced the old 'prepaid lease expense' model. The correct debit is Right-of-Use Asset for all leases under the new standard.",
+      "why_not_D": "$100,000 is the undiscounted sum of payments. Ignoring the time value of money overstates both the asset and the liability.",
+      "tip": "Lease liability = PV of future payments at the IBR. The ROU asset starts at the same amount (adjusted for prepayments or incentives, if any)."
+    }
+  },
+  {
+    "id": "lease_2",
+    "topic": "leases",
+    "scenario": "Metro Office Corp. has a finance lease initiated January 1, 2024. Lease liability at Jan 1 = $50,000; annual interest rate = 8%; first annual payment of $12,000 due December 31, 2024. The staff recorded the year-end payment as:\n\nDr. Lease Liability     $12,000\n  Cr. Cash                  $12,000\n\nDate: December 31, 2024",
+    "question": "What entry component is MISSING from this journal entry?",
+    "options": {
+      "A": "Interest expense of $4,000 (8% × $50,000) must be recorded separately.",
+      "B": "The payment should be split between principal and rent expense for an operating lease.",
+      "C": "Depreciation on the right-of-use asset is missing and should be in this same entry.",
+      "D": "Nothing is missing; reducing the lease liability by the full payment is correct."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_reason": "For a finance lease, the periodic payment has two components: interest expense (8% × $50,000 = $4,000) and principal reduction ($12,000 − $4,000 = $8,000). The correct entry credits Cash $12,000, debits Interest Expense $4,000, and debits Lease Liability $8,000.",
+      "why_not_B": "Metro has a finance lease, not an operating lease. Operating leases record a single 'Lease Expense' line; finance leases separately record interest and principal reduction.",
+      "why_not_C": "Depreciation on the ROU asset is a real requirement, but it is a SEPARATE adjusting entry — not combined into the payment entry.",
+      "why_not_D": "Debiting the full $12,000 to Lease Liability underpays the liability principal (should be $8,000) and entirely omits interest expense of $4,000.",
+      "tip": "Finance lease payment = Interest Expense + Principal. Always compute interest first (rate × beginning liability), then the remainder reduces the liability."
+    }
+  },
+  {
+    "id": "lease_3",
+    "topic": "leases",
+    "scenario": "Cedar Corp. leases office space for 3 years starting January 1, 2024. Annual payment = $15,000 at year-end. IBR = 5%. PV factor (annuity, 3 yrs, 5%) = 2.7232. Lease liability at inception = $40,848.\n\nAt December 31, 2024 (after the first payment), the staff recorded the operating lease expense entry as:\n\nDr. Right-of-Use Asset     $15,000\n  Cr. Cash                      $15,000",
+    "question": "What is WRONG with this year-end entry for an operating lease?",
+    "options": {
+      "A": "The debit should be to Lease Expense, not Right-of-Use Asset. For an operating lease, the single straight-line expense is debited to Lease Expense, with a corresponding reduction in the ROU asset and lease liability.",
+      "B": "The correct entry is to debit Lease Expense and credit the Lease Liability by the full $15,000.",
+      "C": "The entry is correct; under ASC 842 all lease payments reduce the ROU asset directly.",
+      "D": "Cedar should record interest expense and depreciation separately, just like a finance lease."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_reason": "For an operating lease, ASC 842 requires a single straight-line Lease Expense each period. The lease expense is $15,000 (total annual payment for a 3-year flat-payment lease). The entry debits Lease Expense $15,000 and credits Cash $15,000, while the ROU asset is reduced by the difference between lease expense and the interest portion of the liability reduction — handled as an amortization plug. Debiting the ROU Asset directly is incorrect.",
+      "why_not_B": "Crediting Lease Liability by $15,000 ignores that only the principal portion of the payment reduces the liability; the interest component is unwound separately in the amortization schedule.",
+      "why_not_C": "ASC 842 does not reduce the ROU asset directly through the payment entry for operating leases. The ROU asset amortization is a plug: ROU decrease = Lease Expense − Interest on Lease Liability.",
+      "why_not_D": "Separate interest and depreciation is the finance lease model (ASC 842-20-25-6). Operating leases use a single straight-line expense — a key distinction on the CPA exam.",
+      "tip": "Operating lease expense journal entry: Dr. Lease Expense / Cr. Cash. The ROU asset and liability balances are updated in the amortization table, not in the payment entry itself."
+    }
+  },
+  {
+    "id": "lease_4",
+    "topic": "leases",
+    "scenario": "Ironwood Inc. signs a 5-year lease on January 1, 2024. The annual payment is $18,000 at the end of each year. IBR = 7%. PV factor (annuity, 5 yrs, 7%) = 4.1002. Lease liability = $73,804. The lease transfers ownership at the end of the term.\n\nIronwood classified the lease as an OPERATING lease and plans to record a straight-line Lease Expense of $18,000 per year.",
+    "question": "What is WRONG with Ironwood's lease classification under ASC 842?",
+    "options": {
+      "A": "The lease should be classified as a finance lease because it transfers ownership at the end of the term.",
+      "B": "The lease is correctly classified as operating; ownership transfer criteria do not affect classification.",
+      "C": "The lease should be classified as a capital lease under ASC 840.",
+      "D": "Classification depends on whether the payments exceed 90% of the asset's fair value, not on ownership transfer."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_reason": "ASC 842-20-25-2 lists five criteria for finance lease classification. If ANY ONE is met, the lease is a finance lease. Criterion (a): the lease transfers ownership of the asset to the lessee by end of the lease term. That criterion is met here, so the lease MUST be classified as a finance lease, with separate interest expense and ROU asset depreciation — not straight-line lease expense.",
+      "why_not_B": "The ownership transfer criterion explicitly governs classification under ASC 842. Meeting it mandates finance lease treatment.",
+      "why_not_C": "ASC 840 (old GAAP) used the term 'capital lease.' ASC 842 replaced it. The correct current term is 'finance lease,' and the five ASC 842 criteria apply.",
+      "why_not_D": "The 90% of fair value test was an ASC 840 bright-line rule. Under ASC 842, it is merely one of five criteria (substantially all of the fair value), and the ownership transfer criterion is separate and independently sufficient.",
+      "tip": "ASC 842 finance lease: ANY ONE of five criteria triggers it — ownership transfer, bargain purchase option, specialized asset, present value ≥ substantially all FV, or lease term ≥ major part of useful life."
+    }
+  },
+  {
+    "id": "lease_5",
+    "topic": "leases",
+    "scenario": "BlueStar Corp. signs a 5-year operating lease for equipment on January 1, 2024. Annual payments are $15,000 at year-end. IBR = 6%. PV factor (ordinary annuity, 5 yrs, 6%) = 4.2124. Lease liability and ROU asset at inception = $63,186 ($15,000 × 4.2124).\n\nAt December 31, 2024, the staff recorded the first annual payment as:\n\nDr. Lease Expense     $15,000\n  Cr. Lease Liability       $15,000",
+    "question": "What is WRONG with this year-end payment entry for an operating lease?",
+    "options": {
+      "A": "The credit should be to Cash, not Lease Liability. The correct entry is Dr. Lease Expense $15,000 / Cr. Cash $15,000; the Lease Liability is updated separately via the amortization schedule.",
+      "B": "Lease Expense should equal the interest component only (6% × $63,186 = $3,791); the rest reduces the ROU asset.",
+      "C": "The entry is correct; crediting Lease Liability reduces the obligation and is equivalent to crediting Cash.",
+      "D": "The debit should be to Right-of-Use Asset, not Lease Expense, because operating lease payments increase the asset balance."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_reason": "For an operating lease under ASC 842, the payment entry is Dr. Lease Expense / Cr. Cash — always. The Lease Liability and ROU asset balances are updated through the amortization schedule (not the payment entry). Crediting Lease Liability $15,000 instead of Cash leaves the liability overstated by $15,000 and fails to record the cash outflow.",
+      "why_not_B": "Lease Expense for a straight-line operating lease equals the total annual payment ($15,000), not just the interest component. Separating interest and principal reduction is the finance lease model — not applicable to operating leases.",
+      "why_not_C": "Crediting Lease Liability is NOT equivalent to crediting Cash. It fails to reduce the cash balance and overstates the lease obligation on the balance sheet. The two accounts serve completely different purposes.",
+      "why_not_D": "Operating lease payments are expensed immediately (Dr. Lease Expense). The ROU asset is not debited through the payment entry — it decreases via the amortization plug in the schedule, which is a bookkeeping adjustment, not a payment.",
+      "tip": "Operating lease payment entry: Dr. Lease Expense / Cr. Cash — full stop. The liability and ROU asset are adjusted in the amortization table, never directly in the payment journal entry."
+    }
+  },
+  {
+    "id": "lease_6",
+    "topic": "leases",
+    "scenario": "On January 1, 2024, Falcon Ltd. signs a lease with monthly payments of $2,000 for 2 years, with an option to purchase the asset for $1 (a bargain purchase option). IBR = 6% annually (0.5%/month). PV of 24 payments at 0.5%/month = factor 22.5629. Falcon's staff classified this as an OPERATING lease.\n\nInitial entry:\n\nDr. Right-of-Use Asset     $45,126\n  Cr. Lease Liability          $45,126",
+    "question": "What is WRONG with classifying this as an operating lease?",
+    "options": {
+      "A": "A 2-year lease term is too short to be a finance lease regardless of other terms.",
+      "B": "The entry amounts are wrong; PV should use annual, not monthly, payments.",
+      "C": "The lease contains a bargain purchase option, which is a finance lease criterion under ASC 842; it must be classified as a finance lease.",
+      "D": "The operating lease classification is correct; bargain purchase options are only relevant under old ASC 840."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_reason": "ASC 842-20-25-2(b) states that if the lease contains an option to purchase the underlying asset and the lessee is reasonably certain to exercise it (a bargain purchase option at $1 qualifies), the lease is a finance lease. Classification as operating is incorrect. As a finance lease, Falcon must separately record interest expense and depreciate the ROU asset — not use straight-line lease expense.",
+      "why_not_A": "Lease term length is not independently disqualifying. The finance lease criteria under ASC 842 do not set a minimum term — a 2-year lease with a bargain purchase option is still a finance lease.",
+      "why_not_B": "Using monthly payments and a monthly rate is correct here. The PV calculation is properly done on a monthly basis; this is not the error.",
+      "why_not_D": "The bargain purchase option criterion explicitly carries over into ASC 842 (criterion b). It is not limited to old GAAP.",
+      "tip": "Bargain purchase option = automatic finance lease under ASC 842. If the purchase price is so low that exercise is reasonably certain, check criterion (b) first."
+    }
+  },
+  {
+    "id": "inv_1",
+    "topic": "inventory",
+    "scenario": "Summit Retail uses FIFO for inventory. Beginning inventory: 100 units @ $10. Purchases: 200 units @ $12. Sales: 250 units at $20 each. A staff accountant computed Cost of Goods Sold as:\n\nCOGS = 250 units × $12 = $3,000\n\nand recorded:\n\nDr. Cost of Goods Sold     $3,000\n  Cr. Inventory                  $3,000",
+    "question": "What is WRONG with the COGS calculation under FIFO?",
+    "options": {
+      "A": "FIFO requires using the most recent purchase price, so $12 per unit is correct.",
+      "B": "Under FIFO, the first 100 units cost $10 and the next 150 cost $12, so COGS = $2,800.",
+      "C": "COGS should be based on average cost: (100×$10 + 200×$12) / 300 = $11.33 per unit.",
+      "D": "The entry is correct; using the purchase price of $12 for all units is acceptable."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "FIFO sells oldest inventory first. The first 100 units sold came from beginning inventory at $10 ($1,000), and the next 150 units from the $12 purchase ($1,800). Total COGS = $1,000 + $1,800 = $2,800.",
+      "why_not_A": "FIFO is the OPPOSITE of using the most recent price — that describes LIFO. FIFO always starts with the oldest (cheapest in a rising-price scenario) units.",
+      "why_not_C": "Averaging all costs regardless of purchase date describes the weighted-average method, not FIFO. Each method produces a different COGS.",
+      "why_not_D": "Using $12 for all 250 units is neither FIFO nor average cost — it ignores the beginning inventory layer entirely and overstates ending inventory value.",
+      "tip": "FIFO mnemonic: 'First In, First Out' — always sell/use the OLDEST layer first; work your way forward through purchase layers."
+    }
+  },
+  {
+    "id": "inv_2",
+    "topic": "inventory",
+    "scenario": "Alpine Goods applies the lower-of-cost-or-net-realizable-value (LCNRV) rule. At year-end, one product has: Cost = $500, Selling Price = $600, Estimated Completion Costs = $40, Normal Profit Margin = $80.\n\nThe staff accountant determined NRV = $600 − $80 = $520 and recorded no write-down since $500 < $520.",
+    "question": "What error did the staff accountant make in computing NRV?",
+    "options": {
+      "A": "NRV = Selling Price only ($600); no costs are subtracted.",
+      "B": "NRV = Selling Price minus costs to complete and sell ($600 − $40 = $560); normal profit is NOT deducted under ASC 330.",
+      "C": "NRV = Selling Price minus all costs including profit ($600 − $40 − $80 = $480); a write-down is required.",
+      "D": "LCNRV does not apply to finished goods, only to raw materials."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "Under ASC 330, NRV = estimated selling price in the ordinary course of business MINUS reasonably predictable costs of completion AND disposal. Normal profit margin is NOT subtracted (that calculation belongs to the old GAAP 'market' rule). NRV = $600 − $40 = $560. Since cost ($500) < NRV ($560), no write-down is needed — but the NRV calculation itself was wrong.",
+      "why_not_A": "NRV is not simply the selling price. The costs required to get the inventory ready for sale (completion costs) must be deducted.",
+      "why_not_C": "Deducting normal profit margin is the IFRS IAS 2 approach and also resembles old US GAAP 'replacement cost' rules. ASC 330 (post-2015 update) explicitly removed normal profit from the NRV calculation.",
+      "why_not_D": "LCNRV under ASC 330 applies to ALL inventory, including finished goods, work-in-process, and raw materials.",
+      "tip": "ASC 330 NRV shortcut: Selling Price − Costs to Complete & Sell. Stop there — do NOT subtract profit margin."
+    }
+  },
+  {
+    "id": "inv_3",
+    "topic": "inventory",
+    "scenario": "Oakdale Distributors uses the weighted-average cost method (perpetual). Beginning inventory: 200 units @ $15 = $3,000. Purchase on March 5: 300 units @ $18 = $5,400. Sale on March 10: 400 units.\n\nThe staff computed weighted-average cost per unit BEFORE the March 5 purchase:\n\nCost per unit = $3,000 / 200 = $15.00\nCOGS = 400 × $15 = $6,000",
+    "question": "What is WRONG with the COGS calculation under the perpetual weighted-average method?",
+    "options": {
+      "A": "The perpetual weighted-average is computed only once at year-end, so $15/unit is correct for March.",
+      "B": "The weighted-average cost must be recomputed after each purchase. After the March 5 purchase, cost per unit = ($3,000 + $5,400) / (200 + 300) = $16.80; COGS = 400 × $16.80 = $6,720.",
+      "C": "COGS should use the most recent purchase price ($18), giving COGS = 400 × $18 = $7,200.",
+      "D": "The staff used $15, which is correct; the March 5 purchase has not yet been received by the sale date."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "Under the PERPETUAL weighted-average (moving average) method, the average cost per unit is recalculated after every purchase. After the March 5 purchase: total cost = $3,000 + $5,400 = $8,400; total units = 200 + 300 = 500; average = $8,400 / 500 = $16.80 per unit. COGS for the March 10 sale = 400 × $16.80 = $6,720.",
+      "why_not_A": "Computing the average only at year-end describes the PERIODIC weighted-average method, not the perpetual moving-average method. Under perpetual, the average is updated after every purchase transaction.",
+      "why_not_C": "Using only the most recent purchase price is the LIFO perpetual method, not weighted-average. Weighted-average blends all available layers at each point.",
+      "why_not_D": "The problem states the purchase occurred on March 5 and the sale on March 10. The March 5 purchase is already in inventory before the sale, so it must be included in the average.",
+      "tip": "Perpetual vs. periodic weighted-average: 'Perpetual' recalculates after EVERY purchase; 'periodic' uses a single year-end average. Know which one the question specifies."
+    }
+  },
+  {
+    "id": "inv_4",
+    "topic": "inventory",
+    "scenario": "Clearwater Electronics has inventory on hand at year-end with the following data:\n\n  Item A: Cost $200, NRV $230\n  Item B: Cost $150, NRV $120\n  Item C: Cost $80, NRV $95\n\nThe staff applied LCNRV on a TOTAL (aggregate) basis:\n\nTotal cost = $430; Total NRV = $445\nSince $430 < $445, no write-down was recorded.",
+    "question": "What is WRONG with how LCNRV was applied under ASC 330?",
+    "options": {
+      "A": "LCNRV must be applied item by item (or by category). Item B has NRV $120 < Cost $150, requiring a $30 write-down regardless of gains on other items.",
+      "B": "The aggregate approach is acceptable under ASC 330; no write-down is required.",
+      "C": "LCNRV should use replacement cost, not NRV, as the 'market' value under US GAAP.",
+      "D": "A write-down is only required if total NRV is less than total cost across the entire inventory."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_reason": "ASC 330-10-35-1 requires the LCNRV test to be applied item by item (or at most by natural categories), never on a total-portfolio basis. Item B's NRV ($120) is below its cost ($150), so a $30 write-down is required for Item B. Gains on Items A and C cannot offset losses on Item B.",
+      "why_not_B": "An aggregate approach is NOT permitted under ASC 330. It would mask losses on individual items by netting them against unrealized gains on other items.",
+      "why_not_C": "Before the 2015 ASU 2015-11, US GAAP used 'market' (which could be replacement cost within a floor/ceiling range). After ASU 2015-11, US GAAP uses NRV — not replacement cost — for most inventory (except LIFO and retail).",
+      "why_not_D": "This describes the impermissible aggregate approach. The rule is per-item (or per-category), not total inventory.",
+      "tip": "LCNRV is applied ITEM BY ITEM (or by category). Gains on healthy items NEVER offset write-downs on impaired items."
+    }
+  },
+  {
+    "id": "inv_5",
+    "topic": "inventory",
+    "scenario": "Ridgeline Manufacturing uses LIFO for inventory (periodic). Beginning inventory: 400 units @ $20. Purchases during the year: 600 units @ $25. Units sold during the year: 700 units.\n\nThe staff computed Cost of Goods Sold and ending inventory as follows:\n\nCOGS = 700 units × $20 = $14,000\nEnding inventory = (1,000 − 700) = 300 units × $25 = $7,500\n\nEntry recorded:\n\nDr. Cost of Goods Sold     $14,000\n  Cr. Inventory                  $14,000",
+    "question": "What is WRONG with this COGS calculation under LIFO periodic?",
+    "options": {
+      "A": "LIFO periodic uses the OLDEST cost for COGS; 700 × $20 = $14,000 is correct.",
+      "B": "Under LIFO periodic, the most recent purchases are sold first: 600 units @ $25 ($15,000) + 100 units @ $20 ($2,000) = COGS $17,000. Ending inventory = 300 units @ $20 = $6,000.",
+      "C": "COGS should use the weighted-average cost: (400×$20 + 600×$25) / 1,000 = $23 per unit; COGS = 700 × $23 = $16,100.",
+      "D": "LIFO periodic COGS = most recent 600 units @ $25 only = $15,000; the remaining 100 units sold come from ending inventory, not COGS."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "Under LIFO periodic, the most recently purchased units are assumed sold first. COGS: 600 units @ $25 = $15,000, plus 100 units from beginning inventory @ $20 = $2,000; total COGS = $17,000. Ending inventory = the remaining 300 units from beginning inventory @ $20 = $6,000. The staff used the OLDEST cost ($20) for COGS and the NEWEST cost ($25) for ending inventory — the exact opposite of LIFO.",
+      "why_not_A": "Using the oldest cost ($20) for COGS describes FIFO, not LIFO. LIFO ('Last In, First Out') sends the most recently purchased units to COGS first.",
+      "why_not_C": "Using a blended average cost describes the weighted-average method, not LIFO. Each method produces a different COGS and ending inventory.",
+      "why_not_D": "This partially applies LIFO correctly (selling 600 newest units first) but stops there and ignores the remaining 100 units that must also come from COGS to reach the 700 units sold. COGS is 600 + 100 = 700 units, not 600.",
+      "tip": "LIFO = 'Last In, First Out': newest layers go to COGS first; the OLDEST layers stay in ending inventory. If costs are rising, LIFO gives higher COGS and lower ending inventory than FIFO."
+    }
+  },
+  {
+    "id": "inv_6",
+    "topic": "inventory",
+    "scenario": "Vanguard Goods holds 500 units in inventory, cost = $40 per unit. Due to a product recall, the net realizable value drops to $30 per unit. The staff accountant recorded the write-down as:\n\nDr. Loss on Inventory Write-Down     $5,000\n  Cr. Inventory                              $5,000\n\nOne month later, the recall is lifted and NRV recovers to $38 per unit. The staff records:\n\nDr. Inventory                   $4,000\n  Cr. Gain on Inventory Recovery  $4,000",
+    "question": "What is WRONG with the recovery entry under ASC 330?",
+    "options": {
+      "A": "The recovery entry is correct; ASC 330 allows inventory write-ups when NRV recovers.",
+      "B": "The recovery should be limited to the original write-down amount ($5,000), so a $4,000 recovery is permissible — the entry is correct.",
+      "C": "ASC 330 does not permit reversals of inventory write-downs. Once written down, inventory is carried at the new lower cost basis and cannot be written back up.",
+      "D": "The recovery entry is fine, but it should credit 'Reduction of Cost of Goods Sold' rather than a Gain account."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_reason": "Under ASC 330-10-35-14, the reduced cost basis of inventory written down under LCNRV becomes the new cost basis and cannot be written back up, even if circumstances later improve. This is a fundamental difference from IFRS (IAS 2 allows reversals). The recovery entry must be reversed — Vanguard's inventory stays at $30/unit.",
+      "why_not_A": "ASC 330 explicitly prohibits write-ups of inventory once written down. The entry is NOT correct under US GAAP.",
+      "why_not_B": "Even though $4,000 is within the $5,000 write-down ceiling, US GAAP does not permit ANY reversal. The dollar amount being less than the original write-down is irrelevant — the reversal itself is prohibited.",
+      "why_not_D": "The account title is a secondary concern. The primary issue is that any recovery entry is prohibited under ASC 330, regardless of which credit account is used.",
+      "tip": "US GAAP LCNRV rule: inventory write-downs are PERMANENT — no reversals ever. IFRS (IAS 2) is the opposite — reversals are allowed up to the original write-down. This is a classic GAAP vs. IFRS exam point."
+    }
+  },
+  {
+    "id": "bonds_1",
+    "topic": "bonds",
+    "scenario": "Lakeview Corp. issued $100,000 of 5-year, 6% bonds on January 1, 2024, when the market rate was 8%. The bonds were issued at $92,015 (a discount). The first semi-annual interest payment is due June 30, 2024.\n\nA staff accountant recorded:\n\nDr. Interest Expense     $3,000\n  Cr. Cash                     $3,000\n\nDate: June 30, 2024",
+    "question": "What is WRONG with this entry under the effective-interest method?",
+    "options": {
+      "A": "The entry should use the stated rate on face value; $3,000 is correct.",
+      "B": "Interest Expense should be $3,681 (4% × $92,015); the difference of $681 amortizes the discount.",
+      "C": "The discount should be amortized using straight-line, not the effective-interest method.",
+      "D": "Cash paid is wrong; bondholders receive 8% × $92,015 = $3,681 in cash."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "Under the effective-interest method, interest expense = carrying value × market rate per period = $92,015 × 4% = $3,681. Cash paid = face × stated rate = $100,000 × 3% = $3,000. The $681 difference reduces (amortizes) the discount on bonds payable. Entry: Dr. Interest Expense $3,681 / Cr. Cash $3,000 / Cr. Discount on Bonds Payable $681.",
+      "why_not_A": "The stated rate ($3,000) gives the CASH payment, not the interest expense. Under EIM, expense is based on the CARRYING VALUE times the MARKET rate — always higher than cash for a discount bond.",
+      "why_not_C": "GAAP requires the effective-interest method unless the straight-line result is not materially different. The question specifies EIM, so straight-line is not applicable here.",
+      "why_not_D": "Cash paid to bondholders is always based on the contractual (stated) rate × face value. Market rate affects expense recognition, not actual cash outflow.",
+      "tip": "EIM rule: Expense = Carrying Value × Market Rate; Cash = Face × Stated Rate; Difference = Discount/Premium amortization."
+    }
+  },
+  {
+    "id": "bonds_2",
+    "topic": "bonds",
+    "scenario": "Harbor Corp. has $200,000 of bonds payable outstanding at a carrying value of $210,500 (issued at a premium). On January 1, 2024, Harbor retires the bonds early by paying $215,000 cash.\n\nThe staff entry reads:\n\nDr. Bonds Payable          $200,000\nDr. Loss on Extinguishment  $15,000\n  Cr. Cash                        $215,000\n\nDate: January 1, 2024",
+    "question": "What is incorrect in this early extinguishment entry?",
+    "options": {
+      "A": "The entry is correct; face value is always used to remove bonds payable.",
+      "B": "The Bonds Payable debit should be the carrying value ($210,500); the loss is only $4,500.",
+      "C": "Since there is a premium, there must be a gain, not a loss.",
+      "D": "Cash paid should equal carrying value ($210,500); no gain or loss arises."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "When retiring bonds, the carrying value (face ± unamortized premium/discount) is removed from the books, not just the face value. Carrying value = $210,500. Reacquisition price = $215,000. Loss = $215,000 − $210,500 = $4,500. Entry: Dr. Bonds Payable $210,500 / Dr. Loss on Extinguishment $4,500 / Cr. Cash $215,000.",
+      "why_not_A": "Using only face value leaves the unamortized premium ($10,500) stranded on the balance sheet. The full carrying value must be derecognized.",
+      "why_not_C": "A premium means bonds were issued above face value, but that does NOT guarantee a gain on retirement. A gain occurs only if reacquisition price < carrying value. Here, $215,000 > $210,500, so there IS a loss.",
+      "why_not_D": "Cash paid is determined by the buyback price negotiated in the market ($215,000), not by accounting book value. The two rarely match.",
+      "tip": "Extinguishment gain/loss = Carrying Value − Reacquisition Price. Positive = gain; negative = loss. Always use carrying value, never face value."
+    }
+  },
+  {
+    "id": "bonds_3",
+    "topic": "bonds",
+    "scenario": "Cypress Corp. issued $500,000 of 10-year, 5% bonds at par on January 1, 2024. Interest is paid semi-annually. On January 1, 2026 (after exactly 2 years and 4 interest payments), Cypress purchases all bonds on the open market for $488,000.\n\nThe bonds were issued at par, so there is no unamortized discount or premium. The staff entry:\n\nDr. Bonds Payable     $500,000\n  Cr. Cash                  $488,000\n  Cr. Gain on Extinguishment  $12,000",
+    "question": "Is this entry correct under ASC 470-50?",
+    "options": {
+      "A": "The entry is incorrect. The gain on extinguishment should be classified as Other Comprehensive Income, not on the income statement.",
+      "B": "The entry is correct. Gain = carrying value ($500,000) − reacquisition price ($488,000) = $12,000, recognized in income.",
+      "C": "The gain should be amortized over the remaining 8-year life of the bonds, not recognized immediately.",
+      "D": "The entry should debit Bonds Payable at face value and use a contra account; recording a gain here is not permitted."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "ASC 470-50-40 requires that the difference between the reacquisition price and the net carrying amount of extinguished debt be recognized in income in the period of extinguishment. The bonds were issued at par, so carrying value = face value = $500,000. Reacquisition price = $488,000. Gain = $12,000, properly reported in income. The entry is correct.",
+      "why_not_A": "Gains and losses on debt extinguishment are reported in net income (typically as a component of other income/expense), NOT in Other Comprehensive Income. OCI is for items like unrealized securities gains and foreign currency translation.",
+      "why_not_C": "ASC 470-50 requires IMMEDIATE recognition of the full gain in the period of extinguishment — not amortization. There is no deferral for extinguishment gains.",
+      "why_not_D": "There is no prohibition on recording a gain on extinguishment. When a company retires debt below carrying value, a gain is proper and expected.",
+      "tip": "Debt extinguishment gain/loss: always IMMEDIATE in net income, never OCI, never amortized. This is a common distractor on the CPA exam."
+    }
+  },
+  {
+    "id": "bonds_4",
+    "topic": "bonds",
+    "scenario": "Magnolia Corp. issued $300,000 of 4% bonds at a premium of $18,000 (total proceeds $318,000) on January 1, 2024. The bonds mature in 6 years, with annual interest payments. Magnolia uses straight-line amortization.\n\nAt December 31, 2024, the staff recorded:\n\nDr. Interest Expense     $12,000  (4% × $300,000)\n  Cr. Cash                     $12,000",
+    "question": "What is WRONG with this entry under straight-line amortization?",
+    "options": {
+      "A": "The entry is correct; $12,000 is the proper interest expense for a 4% bond.",
+      "B": "The cash payment is wrong; it should be 4% × $318,000 = $12,720.",
+      "C": "Interest expense should be reduced by $3,000 ($18,000 ÷ 6 years) of premium amortization, making net interest expense $9,000. The Premium on Bonds Payable account must also be reduced.",
+      "D": "Premium amortization increases interest expense; the entry should be $12,000 + $3,000 = $15,000."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_reason": "Under straight-line amortization, the $18,000 premium is amortized at $18,000 / 6 = $3,000 per year. This REDUCES interest expense below the stated cash payment. Correct entry: Dr. Interest Expense $9,000 / Dr. Premium on Bonds Payable $3,000 / Cr. Cash $12,000. Failing to amortize the premium overstates interest expense.",
+      "why_not_A": "$12,000 is the cash interest paid (stated rate × face), not interest expense. When a premium exists, interest expense is LOWER than cash paid because the borrower effectively received more than they will repay.",
+      "why_not_B": "Cash paid is always based on the stated rate × face value ($300,000 × 4% = $12,000). The issue price ($318,000) is used for the premium calculation, not the cash payment.",
+      "why_not_D": "A DISCOUNT increases interest expense above the cash payment. A PREMIUM does the opposite — it decreases interest expense. Never add premium amortization to the stated interest.",
+      "tip": "Premium bond: Interest Expense = Cash Paid − Premium Amortization (expense < cash). Discount bond: Interest Expense = Cash Paid + Discount Amortization (expense > cash)."
+    }
+  },
+  {
+    "id": "bonds_5",
+    "topic": "bonds",
+    "scenario": "Evergreen Corp. issues convertible bonds: $1,000,000 face, 3% stated rate, 10-year term. The bonds are convertible into common stock at the holder's option. Proceeds received = $980,000 (issued at a discount).\n\nThe staff accountant splits the proceeds between debt and equity:\n\nDr. Cash                           $980,000\n  Cr. Bonds Payable                   $850,000\n  Cr. Additional Paid-In Capital (equity)  $130,000\n\nDate of issuance",
+    "question": "What is WRONG with this entry under US GAAP (ASC 470-20)?",
+    "options": {
+      "A": "The entry is correct; US GAAP requires bifurcation of convertible bonds into debt and equity components.",
+      "B": "Under US GAAP (ASC 470-20, as amended by ASU 2020-06 effective 2022), convertible bonds that do not require separate accounting (no beneficial conversion feature requiring bifurcation) are recorded entirely as debt. The equity component ($130,000) should not be separated.",
+      "C": "The equity component should be $150,000, not $130,000, based on the discount from face value.",
+      "D": "Convertible bonds are always recorded at face value ($1,000,000); no discount is recognized."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_reason": "ASU 2020-06 (effective for public companies in 2022, early adoption permitted 2021) eliminated the requirement to separately account for the equity component of most convertible instruments. Under current ASC 470-20, convertible bonds without a cash conversion feature or beneficial conversion feature are recorded entirely as a single liability. The full proceeds ($980,000) go to Bonds Payable; no equity component is bifurcated.",
+      "why_not_A": "Bifurcation was required under old ASC 470-20 (pre-ASU 2020-06) but is no longer required for most convertible instruments under current US GAAP.",
+      "why_not_C": "Debating the split amount is moot — the entire bifurcation approach is no longer applicable for standard convertible bonds under post-2022 US GAAP.",
+      "why_not_D": "The bonds ARE recorded at proceeds ($980,000), not face value. The discount ($20,000) is properly recognized and amortized over the bond term. The error is the equity split, not the discount treatment.",
+      "tip": "Post-ASU 2020-06 (2022+): most convertible bonds = single liability at proceeds. Bifurcation is only required for instruments with an embedded derivative that must be separated under ASC 815."
+    }
+  },
+  {
+    "id": "bonds_6",
+    "topic": "bonds",
+    "scenario": "Stonegate Corp. has the following balance for bonds on December 31, 2024:\n  Bonds Payable (face):        $400,000\n  Unamortized Discount:         ($12,000)\n  Carrying Value:              $388,000\n\nThe bonds mature on December 31, 2026 (2 years remaining). Stonegate uses straight-line amortization.\n\nThe balance sheet prepared by the staff shows:\n  Current Liabilities:   Bonds Payable    $388,000\n  Long-Term Liabilities: (nothing)",
+    "question": "What is WRONG with the balance sheet presentation under ASC 470?",
+    "options": {
+      "A": "The bonds should be classified as current because debt is always current when it carries a discount.",
+      "B": "The bonds should be split: $6,000 discount amortization for 2025 is current; the rest is long-term.",
+      "C": "Since December 31, 2026 is more than 12 months from the balance sheet date, the full $388,000 carrying value belongs in Long-Term Liabilities — not Current Liabilities.",
+      "D": "Bonds payable should always be presented at face value ($400,000), not carrying value, on the balance sheet."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_reason": "ASC 210-10-45 requires debt to be classified as current only when it matures within 12 months of the balance sheet date. As of December 31, 2024, the bonds mature on December 31, 2026 — 24 months away. The full carrying value ($388,000) is therefore Long-Term. Placing it in Current Liabilities overstates short-term obligations.",
+      "why_not_A": "The existence of a discount has no bearing on current vs. long-term classification. Classification is determined solely by the maturity date relative to the balance sheet date.",
+      "why_not_B": "Discount amortization is a periodic interest charge, not principal coming due. The amortization schedule does not convert any portion of the bond into a current liability.",
+      "why_not_D": "Bonds payable are presented on the balance sheet at their NET carrying value (face value minus unamortized discount, or plus unamortized premium), not at face value alone.",
+      "tip": "Current vs. long-term debt rule: does principal mature within 12 months? Yes → current. No → long-term. Discount/premium amortization never drives current vs. long-term classification."
+    }
+  }
+]
