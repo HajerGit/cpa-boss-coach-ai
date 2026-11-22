@@ -482,9 +482,9 @@ def _ask_the_coach(task: dict, user_choice: str) -> None:
     # One-tap starter questions
     wrong = user_choice != task["correct"]
     starters = [
-        f"Why is my answer ({user_choice}) wrong?" if wrong else "Why is this the right answer?",
-        "Explain this more simply, step by step.",
-        "Give me a similar example to practice.",
+        f"Why is my answer ({user_choice}) wrong?" if wrong else "Why is this right?",
+        "Explain it more simply",
+        "Give me a similar example",
     ]
     cols = st.columns(len(starters))
     for i, (col, q) in enumerate(zip(cols, starters)):

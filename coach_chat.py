@@ -151,7 +151,10 @@ def ask_coach(task: dict, user_choice: str | None, history: list[dict]) -> str:
     config = types.GenerateContentConfig(
         system_instruction=SYSTEM_PROMPT.format(task_block=build_task_block(task, user_choice)),
         temperature=0.3,
-        max_output_tokens=700,
+        # Newer Gemini models "think" before answering, and that thinking counts toward
+        # this limit. A low limit cuts answers off mid-sentence, so keep it generous;
+        # the prompt itself keeps answers short.
+        max_output_tokens=4096,
     )
     contents = build_contents(history)
 
